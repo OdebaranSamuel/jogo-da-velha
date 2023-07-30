@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Libre+Baskerville&family=Open+Sans:wght@300&family=Victor+Mono&display=swap");
+
+/* #068fff  cor para usar no x e circulo */
 * {
     box-sizing: border-box;
 }
@@ -9,8 +12,33 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #205e61;
+    box-sizing: border-box;
 }
 
-canvas {
-    background-color: rgb(0, 0, 0);
+header {
+    margin-bottom: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Victor Mono", monospace;
+}
+
+.jogador {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-family: "Victor Mono", monospace;
+    color: white;
+}
+
+.container {
+    border: solid 2px black;
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.botao {
 }
