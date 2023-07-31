@@ -1,18 +1,28 @@
 const botao = document.querySelectorAll(".botao");
-const jogador = document.querySelector(".jogador");
 
-const matriz = [];
+let jogador = "X";
+
+let matriz = [];
+
+const vencePosicoes = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [1, 5, 9],
+    [1, 4, 7],
+    [2, 5, 8],
+    [3, 5, 7],
+    [1, 5, 9],
+    [3, 6, 9],
+];
 let cont = 0;
 
 botao.forEach((elemento) => {
-    elemento.addEventListener("click", () => {
-        return console.log(elemento.innerHTML);
-    });
+    elemento.innerHTML = " ";
+    elemento.addEventListener("click", pegaData);
 });
 
-// function adicionaMatriz() {}
-// for (let linha = 0; linha < 3; linha++) {
-//     for (let coluna = 0; coluna < 3; coluna++) {
-//         console.log(matriz[linha][coluna]);
-//     }
-// }
+function pegaData(evento) {
+    const btn = evento.target.getAttribute("data-btn");
+    evento.target.innerHTML = jogador;
+}
